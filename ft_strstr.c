@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 16:33:51 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/29 15:19:29 by sumaseko         ###   ########.fr       */
+/*   Created: 2019/05/28 14:29:16 by sumaseko          #+#    #+#             */
+/*   Updated: 2019/05/28 16:32:37 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int m)
+char		*strstr(const char *haystack, const char *needle)
 {
-	unsigned char m1;
+	unsigned int m;
+	unsigned int z;
 
-	m1 = (unsigned char)m1;
-	if (m >= '0' && m <= '9')
-		return (1);
-	else
-		return (0);
+	m = 0;
+	z = 0;
+	if (haystack[0] == '\0' && needle[0] == '\0')
+		return ((char *)haystack);
+	while (haystack[m] != '\0')
+	{
+		while (needle[z] != '\0' && haystack[m + z] == needle[z])
+			z++;
+		if (needle[z] == '\n')
+			return ((char *)haystack + m);
+		m++;
+	}
+	return (NULL);
 }

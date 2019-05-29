@@ -6,7 +6,7 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 15:02:21 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/27 17:22:47 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/05/29 15:18:33 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	ft_isalnum(int m)
 {
 	unsigned char m1;
+
 	m1 = (unsigned char)m1;
 	if (m >= 0 && m <= 172)
 		return (1);

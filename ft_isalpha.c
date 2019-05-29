@@ -6,7 +6,7 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 16:46:30 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/27 17:23:04 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/05/29 15:18:58 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int		ft_isalpha(int m)
 {
 	unsigned char m1;
+
 	m1 = (unsigned char)m1;
 	if ((m >= 'A' && m <= 'Z') || (m >= 'a' && m <= 'z'))
 		return (1);

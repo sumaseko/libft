@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 16:33:51 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/29 15:19:29 by sumaseko         ###   ########.fr       */
+/*   Created: 2019/05/29 11:48:13 by sumaseko          #+#    #+#             */
+/*   Updated: 2019/05/29 14:44:46 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int m)
+char	*ft_strcat(char *restrict s1, char *restrict s2)
 {
-	unsigned char m1;
+	int i;
+	int m;
 
-	m1 = (unsigned char)m1;
-	if (m >= '0' && m <= '9')
-		return (1);
-	else
-		return (0);
+	m = 0;
+	i = 0;
+	while (s1[i])
+	{
+		i++;
+	}
+	while (s2[m])
+	{
+		s1[i] = s2[m];
+		m++;
+		i++;
+	}
+	s1[i] = '\0';
+	return (s1);
 }

@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 16:33:51 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/29 15:19:29 by sumaseko         ###   ########.fr       */
+/*   Created: 2019/05/28 08:35:39 by sumaseko          #+#    #+#             */
+/*   Updated: 2019/05/29 15:32:41 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int m)
+int					ft_atoi(const char *str)
 {
-	unsigned char m1;
+	long			res;
+	long			sign;
+	unsigned int	i;
 
-	m1 = (unsigned char)m1;
-	if (m >= '0' && m <= '9')
-		return (1);
-	else
-		return (0);
+	res = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] == '\v' || str[i] == '\n' || str[i] == ' ' || str[i] == '\t' || str[i] == '\f' || str[i] == '\r')
+	{
+		i++;
+		res = res * 10 + str[i] - '0';
+	}
+	if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	return ((int)(sign * res));
 }
