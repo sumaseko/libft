@@ -6,13 +6,13 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 12:44:48 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/06/01 11:44:37 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:09:09 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void		*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 	char	*d;
