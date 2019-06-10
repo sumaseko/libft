@@ -6,17 +6,15 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:11:55 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/27 11:53:17 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/07 09:29:05 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int		ft_tolower(int m)
 {
 	if (m >= 'A' && m <= 'Z')
-	{
 		m = m + 32;
 		return (m);
-	}
 }

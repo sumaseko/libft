@@ -6,7 +6,7 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 10:49:43 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/29 11:21:11 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/10 15:23:16 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strcpy(char *dst, const char *src)
 	int m;
 
 	m = 0;
-	while (dst[m])
+	while (src[m] != '\0')
 	{
 		dst[m] = src[m];
 		m++;

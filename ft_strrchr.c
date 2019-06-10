@@ -6,27 +6,28 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 13:45:31 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/30 16:46:27 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/10 17:51:22 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	m;
+	char	*m;
 
-	m = strlen(s);
-	if (c == 0)
-		return ((char *)s);
-	while (*s != '\0')
+	m = 0;
+	while (*s)
 	{
 		if (*s == c)
 		{
-			return ((char *)s + m);
+			m = (char *)s;
 		}
-		s++;
+		++s;
 	}
+	if (m)
+		return (m);
+	if (c == '\0')
+		return ((char *)s);
 	return (NULL);
 }

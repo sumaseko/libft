@@ -6,7 +6,7 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 12:41:31 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/30 16:15:37 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/10 15:47:10 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ char	*ft_strchr(const char *s, int c)
 		}
 		s++;
 	}
+	if (!c && *s == '\0')
+		return ((char *)s);
 	return (NULL);
 }

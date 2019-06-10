@@ -6,17 +6,15 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:19:52 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/27 12:16:21 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/07 09:28:39 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int		ft_toupper(int m)
 {
 	if (m >= 'a' && m <= 'z')
-	{
 		m = m - 32;
 		return (m);
-	}
 }
