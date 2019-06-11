@@ -6,7 +6,7 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 08:35:39 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/29 16:06:24 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/11 15:35:29 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,18 @@ int					ft_atoi(const char *str)
 	res = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] == '\v' || str[i] == '\n' || str[i] == ' ' || str[i] == '\t'
-	|| str[i] == '\f' || str[i] == '\r')
-	{
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' || str[i] ==  '\n'
+		   	|| str[i] == '\f' || str[i] == '\r')
 		i++;
-		res = res * 10 + str[i] - '0';
-	}
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		sign = -1;
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + str[i] - '0';
 		i++;
 	}
 	return ((int)(sign * res));
