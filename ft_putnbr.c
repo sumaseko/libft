@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 10:43:58 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/06/12 13:29:01 by sumaseko         ###   ########.fr       */
+/*   Created: 2019/06/12 14:13:05 by sumaseko          #+#    #+#             */
+/*   Updated: 2019/06/12 14:33:25 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+void	ft_putnbr(int n)
 {
-	unsigned int	i;
-	char			*substr;
-
-	i = 0;
-	if (!s)
-		return (0);
-	substr = (char *)malloc(sizeof(char) * len + 1);
-	if (substr == NULL)
-		return (NULL);
-	while (i < len)
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
+	if (!n)
+		return ;
+	write(1, n, 1);
 }

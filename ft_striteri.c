@@ -6,7 +6,7 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:45:16 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/06/07 09:15:16 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/12 09:18:36 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	unsigned int count;
 
 	count = 0;
+	if (!s)
+		return ;
 	while (s[count] != '\0')
 	{
 		f(count, &s[count]);
