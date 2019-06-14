@@ -6,7 +6,7 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 14:13:05 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/06/13 10:37:14 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/14 15:37:44 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ void	ft_putnbr(int n)
 		ft_putchar(n % 10 + '0');
 	}
 	else
-	ft_putchar(n + '0');
+		ft_putchar(n + '0');
 }

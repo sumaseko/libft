@@ -6,7 +6,7 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 09:28:41 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/06/07 09:27:51 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/14 15:33:25 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	if (s != dstsize)
 		dst[s + m] = '\0';
-		return (s + ft_strlen(src));
+	return (s + ft_strlen(src));
 }
