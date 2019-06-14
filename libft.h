@@ -6,7 +6,7 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 17:01:44 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/06/06 16:57:47 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/14 11:01:26 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strnew(size_t size);
 char				*ft_strnstr(const char *s1, const char *s2, size_t n);
 char				*ft_strrchr(const char *s, int c);
-char				**ft_strslip(char const *s, char c);
-char				*ft_strstr(const char *big, const char *little);
+char				**ft_strsplit(char const *s, char c);
+char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
 int					ft_tolower(int c);
