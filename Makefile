@@ -6,7 +6,7 @@
 #    By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 17:25:52 by sumaseko          #+#    #+#              #
-#    Updated: 2019/06/06 17:29:54 by sumaseko         ###   ########.fr        #
+#    Updated: 2019/06/14 15:32:12 by sumaseko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRC = ft_atoi.c \
 	  ft_memcmp.c \
 	  ft_strlen.c \
 	  ft_strdup.c \
+	  ft_strdel.c \
 	  ft_strcpy.c \
 	  ft_strncpy.c \
 	  ft_strcat.c \
@@ -45,7 +46,6 @@ SRC = ft_atoi.c \
 	  ft_memalloc.c \
 	  ft_memdel.c \
 	  ft_strnew.c \
-	  ft_strdel.c \
 	  ft_strclr.c \
 	  ft_striter.c \
 	  ft_striteri.c \
@@ -56,14 +56,16 @@ SRC = ft_atoi.c \
 	  ft_strsub.c \
 	  ft_strjoin.c \
 	  ft_strtrim.c \
-	  ft_strsplit.c \
-	  ft_itoa.c \
 	  ft_putchar.c \
 	  ft_putstr.c \
+	  ft_putendl.c \
+	  ft_putnbr.c \
 	  ft_putchar_fd.c \
 	  ft_putstr_fd.c \
 	  ft_putendl_fd.c \
 	  ft_putnbr_fd.c \
+	  ft_itoa.c \
+	  ft_strsplit.c \
 
 OBJ = ft_atoi.o \
 	  ft_memset.o \
@@ -97,8 +99,8 @@ OBJ = ft_atoi.o \
 	  ft_memalloc.o \
 	  ft_memdel.o \
 	  ft_strnew.o \
-	  ft_strdel.o \
 	  ft_strclr.o \
+	  ft_strdel.o \
 	  ft_striter.o \
 	  ft_striteri.o \
 	  ft_strmap.o \
@@ -108,24 +110,27 @@ OBJ = ft_atoi.o \
 	  ft_strsub.o \
 	  ft_strjoin.o \
 	  ft_strtrim.o \
-	  ft_strsplit.o \
-	  ft_itoa.o \
 	  ft_putchar.o \
 	  ft_putstr.o \
 	  ft_putendl.o \
 	  ft_putnbr.o \
 	  ft_putchar_fd.o \
+	  ft_putstr_fd.o \
+	  ft_putendl_fd.o \
+	  ft_putnbr_fd.o \
+	  ft_itoa.o \
+	  ft_strsplit.o \
 
-All: $(NAME)
+all: $(NAME)
 
-$(NAME):
-		gcc –c $(SRC) –I $(HEADER)
-		ar rc $(NAME) *.o
-
+$(NAME): $(OBJ)
+	gcc $(FLAGS) -c $(SRC)
+	ar rcs $(NAME) $(OBJ)
+	ranlib $(NAME)
 clean: 
-		rm –f *.o
+	rm –f $(OBJ)
 
 fclean: clean 
-		rm –f $(NAME)
+	rm –f $(NAME)
 
 re: fclean all
