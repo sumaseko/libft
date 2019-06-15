@@ -6,7 +6,7 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 16:33:51 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/05/29 15:19:29 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/15 11:38:58 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		ft_isdigit(int m)
 {
 	unsigned char m1;
 
-	m1 = (unsigned char)m1;
+	m1 = (unsigned char)m;
 	if (m >= '0' && m <= '9')
 		return (1);
 	else
