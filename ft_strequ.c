@@ -6,7 +6,7 @@
 /*   By: sumaseko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 10:07:41 by sumaseko          #+#    #+#             */
-/*   Updated: 2019/06/12 09:21:39 by sumaseko         ###   ########.fr       */
+/*   Updated: 2019/06/18 11:56:26 by sumaseko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
-	if (s1 == s2)
-		return (1);
-	else
+	if (!s1 || !s2)
 		return (0);
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	return (ft_strcmp(s1, s2) ? 0 : 1);
 }
